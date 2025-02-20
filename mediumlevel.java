@@ -3,21 +3,19 @@ import java.util.Collection;
 import java.util.Scanner;
 
 class Card {
-    String symbol; // Symbol of the card (Hearts, Diamonds, Clubs, Spades)
-    String rank;   // Rank of the card (2, 3, 4, ..., 10, Jack, Queen, King, Ace)
+    String symbol; 
+    String rank;   
 
-    // Constructor
+
     public Card(String symbol, String rank) {
         this.symbol = symbol;
         this.rank = rank;
     }
 
-    // Display card details
     public void display() {
         System.out.println(rank + " of " + symbol);
     }
 
-    // Getter for symbol
     public String getSymbol() {
         return symbol;
     }
@@ -28,7 +26,6 @@ public class CardCollectionSystem {
     private static Collection<Card> cardCollection = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
-    // Method to add a card to the collection
     public static void addCard() {
         System.out.print("Enter card symbol (Hearts, Diamonds, Clubs, Spades): ");
         String symbol = scanner.nextLine();
@@ -40,7 +37,6 @@ public class CardCollectionSystem {
         System.out.println("Card added successfully.");
     }
 
-    // Method to find and display all cards with a specific symbol
     public static void findCardsBySymbol() {
         System.out.print("Enter the symbol you want to search for (Hearts, Diamonds, Clubs, Spades): ");
         String searchSymbol = scanner.nextLine();
@@ -58,7 +54,6 @@ public class CardCollectionSystem {
         }
     }
 
-    // Method to display all cards in the collection
     public static void displayAllCards() {
         if (cardCollection.isEmpty()) {
             System.out.println("No cards in the collection.");
