@@ -6,14 +6,12 @@ class Employee {
     String name;
     double salary;
 
-    // Constructor
     public Employee(int id, String name, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
     }
 
-    // Display employee details
     public void display() {
         System.out.println("ID: " + id + ", Name: " + name + ", Salary: " + salary);
     }
@@ -24,11 +22,11 @@ public class EmployeeManagementSystem {
     private static ArrayList<Employee> employees = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
-    // Method to add a new employee
+   
     public static void addEmployee() {
         System.out.print("Enter Employee ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter Employee Name: ");
         String name = scanner.nextLine();
         System.out.print("Enter Employee Salary: ");
@@ -39,11 +37,10 @@ public class EmployeeManagementSystem {
         System.out.println("Employee added successfully.");
     }
 
-    // Method to update an employee's details
     public static void updateEmployee() {
         System.out.print("Enter Employee ID to update: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         
         for (Employee employee : employees) {
             if (employee.id == id) {
@@ -58,7 +55,6 @@ public class EmployeeManagementSystem {
         System.out.println("Employee not found.");
     }
 
-    // Method to remove an employee by ID
     public static void removeEmployee() {
         System.out.print("Enter Employee ID to remove: ");
         int id = scanner.nextInt();
@@ -73,7 +69,6 @@ public class EmployeeManagementSystem {
         System.out.println("Employee not found.");
     }
 
-    // Method to search an employee by ID
     public static void searchEmployee() {
         System.out.print("Enter Employee ID to search: ");
         int id = scanner.nextInt();
@@ -87,7 +82,6 @@ public class EmployeeManagementSystem {
         System.out.println("Employee not found.");
     }
 
-    // Display all employees
     public static void displayAllEmployees() {
         if (employees.isEmpty()) {
             System.out.println("No employees available.");
